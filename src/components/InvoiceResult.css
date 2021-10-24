@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --btn-border-color: rgb(204, 204, 204);
+  --text-color: rgb(116, 116, 116);
+
+  --btn-primary-color: rgb(84, 197, 84);
+  --btn-hover-color: rgb(75, 163, 75);
+}
+
+.invoice-result {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.invoice-result > .left {
+  margin-top: 2rem;
+  width: 50%;
+}
+.invoice-result > .left > #description-box {
+  width: 100%;
+  border: 1.5px solid var(--btn-border-color);
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 16px;
+  margin-top: 2rem;
+}
+
+.invoice-result > .right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 2rem;
+}
+
+.invoice-result > .right > div {
+  display: flex;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.invoice-result > .right div input[type="text"] {
+  width: 100px;
+  text-align: right;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+.invoice-result > .right p {
+  position: absolute;
+  right: 22%;
+}
+
+.tag {
+  opacity: 0.7;
+}
+
+.discount > div > input[type="text"],
+.tax > div > input[type="text"] {
+  padding-right: 0;
+  padding-top: 0.6rem;
+}
+
+.discount > p,
+.tax > p {
+  opacity: 0.7;
+}
+
+.amtpaid > p {
+  opacity: 0.7;
+}
+
+.amtpaid > div,
+.discount > div,
+.tax > div {
+  display: flex;
+  border: 1.5px solid var(--btn-border-color);
+  border-radius: 5px;
+  width: 140px;
+  justify-content: flex-end;
+}
+
+.amtpaid > div > span,
+.discount > div > span,
+.tax > div > span {
+  padding: 0.5rem 0.4rem;
+  opacity: 0.7;
+}
+
+.amtpaid > div > input[type="text"],
+.discount > div > input[type="text"],
+.tax > div > input[type="text"] {
+  text-align: right;
+  border: none;
+  border-radius: 5px;
+}

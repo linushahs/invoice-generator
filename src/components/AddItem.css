@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --btn-border-color: rgb(204, 204, 204);
+  --text-color: rgb(116, 116, 116);
+
+  --btn-primary-color: rgb(84, 197, 84);
+  --btn-hover-color: rgb(75, 163, 75);
+
+  --delete-btn-color: #ec330e;
+  --edit-btn-color: rgb(84, 197, 84);
+}
+
+table {
+  width: 100%;
+  border-spacing: 4px 4px;
+}
+th {
+  text-align: left;
+  padding-left: 10px;
+}
+
+tr p {
+  font-weight: bold;
+}
+
+.item {
+  transition: all 200ms ease-in;
+}
+
+.title {
+  width: 400px;
+  border: 1.5px solid var(--btn-border-color);
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  color: black;
+}
+
+.qty {
+  border: 1.5px solid var(--btn-border-color);
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+}
+
+.rt {
+  border: 1.5px solid var(--btn-border-color);
+  padding: 0.5rem 0.6rem;
+  border-radius: 3px;
+}
+
+.rt > span {
+  padding-right: 0.3rem;
+}
+
+input[type="text"] {
+  width: 100%;
+}
+
+input[type="number"] {
+  width: 100%;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 0.7rem;
+  border: 1.5px solid var(--btn-border-color);
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+tr:nth-child(1) > th:nth-child(2) {
+  width: 120px;
+}
+
+tr:nth-child(2) > td:nth-child(2) {
+  width: 120px;
+}
+
+tr:nth-child(1) {
+  background-color: #ebebeb;
+  height: 35px;
+  border-radius: 5px;
+}
+
+.rate {
+  display: flex;
+  border: 1.5px solid var(--btn-border-color);
+  border-radius: 3px;
+}
+.rate > span {
+  padding: 0.5rem 0 0.5rem 0.6rem;
+}
+.rate > .rate-input {
+  border: none;
+  width: 80px;
+}
+
+.rate > .rate-input:focus {
+  outline: none;
+}
+
+.amount {
+  padding: 0.5rem;
+  color: var(--text-color);
+  width: 140px;
+}
+
+.amt-title {
+  width: 140px;
+}
+
+.edit {
+  display: flex;
+  padding: 0.5rem 0;
+}
+
+.edit-btn {
+  width: 22px;
+  cursor: pointer;
+  color: var(--edit-btn-color);
+  font-size: 22px;
+  margin: 1px 5px;
+}
+
+.delete-btn {
+  width: 24px;
+  cursor: pointer;
+  color: var(--delete-btn-color);
+  font-size: 24px;
+}
+
+.add-item {
+  padding: 0.45rem;
+  border-radius: 3px;
+  border: none;
+  margin: 0.5rem 0 0.5rem 0.3rem;
+  background-color: var(--btn-primary-color);
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+.add-item:hover {
+  background-color: var(--btn-hover-color);
+}
+
+small {
+  display: none;
+}

@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --btn-border-color: rgb(204, 204, 204);
+  --text-color: rgb(116, 116, 116);
+
+  --bg-primary-color: #ebebeb;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-label {
+  cursor: pointer;
+  opacity: 0.8;
+  background-color: var(--bg-primary-color);
+  border-radius: 5px;
+  width: 150px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 1.5px solid var(--btn-border-color);
+}
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  line-height: 120px;
+  text-align: center;
+  border-radius: 5px;
+}
+#add-photo {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  width: 150px;
+  height: 120px;
+}
+
+.header > .right > h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-align: right;
+}
+
+.header > .right > button {
+  padding: 0.5rem 0.7rem;
+  font-size: 16px;
+  border: 1px solid var(--btn-border-color);
+  border-radius: 3px;
+}
+
+.header > .right > input[type="text"] {
+  padding: 0.5rem;
+  text-align: right;
+  margin-left: -5px;
+  font-size: 16px;
+  border: 1px solid var(--btn-border-color);
+  border-radius: 3px;
+  width: 150px;
+}
+
+/* Styling Main section  */
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0 1rem 0;
+  position: relative;
+}
+
+.main > .left > h4 {
+  color: var(--text-color);
+}
+
+.main > .left > input[type="text"] {
+  padding: 1.5rem;
+  margin: 0.5rem 0 1.5rem 0;
+  border: 1.5px solid var(--btn-border-color);
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.warn-text {
+  position: absolute;
+  top: 50px;
+  left: 32%;
+  color: red;
+  text-transform: capitalize;
+}
+
+.warn-text.t2 {
+  top: 175px;
+}
+/* .main > .right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+} */
+.right.date-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.right input[type="date"] {
+  padding: 0.5rem;
+  margin: 0.5rem 0 0 1rem;
+  border: 1.5px solid var(--btn-border-color);
+  border-radius: 5px;
+}
+
+.right label {
+  color: var(--text-color);
+}
