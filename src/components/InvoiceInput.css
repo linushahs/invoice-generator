@@ -113,11 +113,28 @@
 
 .right input[type="date"] {
   padding: 0.5rem;
-  margin: 0.5rem 0 0 1rem;
+  margin: 0.5rem 0 0.5rem 1rem;
   border: 1.5px solid var(--btn-border-color);
   border-radius: 5px;
 }
 
 .right label {
   color: var(--text-color);
+}
+
+@media (max-width: 560px) {
+  .right.date-section div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .header > .right > input[type="text"] {
+    width: 120px;
+  }
+  .main > .left > input[type="text"] {
+    padding: 1rem;
+  }
+  .warn-text {
+    top: 80px;
+  }
 }

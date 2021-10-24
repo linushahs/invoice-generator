@@ -55,7 +55,7 @@ input[type="text"]:focus {
 
 .invoice-result > .right p {
   position: absolute;
-  right: 22%;
+  right: 150px;
 }
 
 .tag {
@@ -100,4 +100,22 @@ input[type="text"]:focus {
   text-align: right;
   border: none;
   border-radius: 5px;
+}
+
+@media (max-width: 560px) {
+  .invoice-result > .right > div {
+    width: 100px;
+  }
+  .invoice-result > .right p {
+    position: absolute;
+    right: 110px;
+  }
+
+  .invoice-result > .right div input[type="text"] {
+    width: 100%;
+  }
+
+  .invoice-result > .right > div > span {
+    margin-left: auto;
+  }
 }

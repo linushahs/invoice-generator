@@ -51,3 +51,12 @@
 .reset-btn:hover {
   background-color: rgb(221, 23, 23);
 }
+
+@media (max-width: 560px) {
+  .invoice-container {
+    padding: 0.5rem;
+  }
+  * {
+    font-size: 14px;
+  }
+}

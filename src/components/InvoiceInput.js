@@ -115,7 +115,6 @@ function InvoiceInput({
             }
           />
           <span className="warn-text">
-            {" "}
             {isChecked.billFrom ? "" : "required!"}{" "}
           </span>
 
@@ -132,8 +131,7 @@ function InvoiceInput({
             }
           />
           <span className="warn-text t2">
-            {" "}
-            {isChecked.billTo ? "" : "required!"}{" "}
+            {isChecked.billTo ? "" : "required!"}
           </span>
         </div>
 

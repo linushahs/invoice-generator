@@ -114,6 +114,7 @@ function InvoiceResult({ subTotal, setInvoiceResultData }) {
           placeholder="--Notes or description--"
           value={notes}
           onChange={(e) => handleChange(e, setNotes)}
+          style={{ resize: "none" }}
         ></textarea>
       </div>
       <div className="right">
@@ -143,7 +144,6 @@ function InvoiceResult({ subTotal, setInvoiceResultData }) {
             <span>%</span>
           </div>
         </div>
-        <div className="btns"></div>
         <div className="total">
           <p className="tag">Total</p>
           <span>Rs.{total}</span>
