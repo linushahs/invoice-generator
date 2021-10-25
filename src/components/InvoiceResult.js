@@ -99,8 +99,7 @@ function InvoiceResult({ subTotal, setInvoiceResultData }) {
   }, [amtPaid]);
 
   useEffect(() => {
-    setAmtPaid(0);
-    setBlcDue(total);
+    setAmtPaid(total);
   }, [total]);
 
   return (

@@ -97,20 +97,20 @@ function AddItem({ setSubTotal, setInvoiceItemData }) {
 
   return (
     <form onSubmit={addItem}>
-      <table className="item-container">
-        <tr>
-          <th>Item</th>
-          <th>Quantity</th>
-          <th>Rate</th>
-          <th className="amt-title">Amount</th>
-        </tr>
+      <div className="item-container">
+        <div class="header">
+          <h4>Item</h4>
+          <h4>Quantity</h4>
+          <h4>Rate</h4>
+          <h4 className="amt-title">Amount</h4>
+        </div>
         {isClicked ? (
           <Item items={items} editItem={editItem} deleteItem={deleteItem} />
         ) : (
           <small></small>
         )}
-        <tr>
-          <td>
+        <div class="item-main">
+          <div class="input-title">
             <input
               type="text"
               onChange={(e) => handleChange(e, setTitle)}
@@ -118,8 +118,8 @@ function AddItem({ setSubTotal, setInvoiceItemData }) {
               placeholder="Item description"
               ref={inputEl}
             />
-          </td>
-          <td>
+          </div>
+          <div class="input-qty">
             <input
               type="number"
               onChange={(e) => handleChange(e, setQty)}
@@ -127,8 +127,8 @@ function AddItem({ setSubTotal, setInvoiceItemData }) {
               placeholder="Quantity"
               className="qty-input"
             />
-          </td>
-          <td className="rate">
+          </div>
+          <div className="rate">
             <span>Rs.</span>
             <input
               type="text"
@@ -137,10 +137,10 @@ function AddItem({ setSubTotal, setInvoiceItemData }) {
               value={rate}
               placeholder="Rate"
             />
-          </td>
-          <td className="amount">Rs. {amt}</td>
-        </tr>
-      </table>
+          </div>
+          <div className="amount">Rs. {amt}</div>
+        </div>
+      </div>
 
       <input type="submit" className="add-item" value="+Add Item" />
     </form>

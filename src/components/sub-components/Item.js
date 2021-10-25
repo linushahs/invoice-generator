@@ -5,23 +5,25 @@ import { MdDelete } from "react-icons/md";
 
 function Item({ items, editItem, deleteItem }) {
   return items.map((item, id) => (
-    <tr className="item" key={id}>
-      <td className="title">
-        <p>{item.title}</p>
-      </td>
-      <td className="qty">
-        <p>{item.qty}</p>
-      </td>
-      <td className="rt">
-        <span>Rs.</span>
-        {item.rate}
-      </td>
-      <td className="amount">Rs. {item.amt}</td>
-      <td className="edit">
+    <div class="sub-item">
+      <div className="item" key={id}>
+        <div className="title">
+          <p>{item.title}</p>
+        </div>
+        <div className="qty">
+          <p>{item.qty}</p>
+        </div>
+        <div className="rt">
+          <span>Rs.</span>
+          {item.rate}
+        </div>
+        <div className="amt">Rs. {item.amt}</div>
+      </div>
+      <div className="edit">
         <FaEdit className="edit-btn" onClick={() => editItem(id, item)} />
         <MdDelete className="delete-btn" onClick={() => deleteItem(id, item)} />
-      </td>
-    </tr>
+      </div>
+    </div>
   ));
 }
 

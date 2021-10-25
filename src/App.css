@@ -18,10 +18,10 @@
 }
 
 .invoice-container {
-  margin-top: 2rem;
+  margin: 2rem 0;
   padding: 2rem;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-  width: 800px;
+  width: 55%;
 }
 
 .back-container {
@@ -39,7 +39,7 @@
 
 .btns {
   display: flex;
-  margin-top: 1rem;
+  margin: 2rem 0;
 }
 
 .review-btn {
@@ -81,9 +81,21 @@
   margin-top: 1px;
 }
 
+@media (max-width: 1200px) {
+  .invoice-container {
+    width: 70%;
+  }
+}
+@media (max-width: 760px) {
+  .invoice-container {
+    width: 90%;
+  }
+}
+
 @media (max-width: 560px) {
   .invoice-container {
     padding: 0;
+    width: 100%;
   }
   * {
     font-size: 14px;

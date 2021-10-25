@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import InvoiceInput from "./components/InvoiceInput";
 import AddItem from "./components/AddItem";
 import InvoiceResult from "./components/InvoiceResult";
@@ -63,6 +63,10 @@ function App() {
     localStorage.clear();
     window.location.reload();
   };
+
+  useEffect(() => {
+    setToDownload(false);
+  }, [invoiceInputData, invoiceItemData, invoiceResultData]);
 
   return (
     <div className="App">

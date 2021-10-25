@@ -4,41 +4,88 @@
   box-sizing: border-box;
 }
 
-table {
+.item-container {
   width: 100%;
-  border-spacing: 4px 4px;
-}
-th {
-  text-align: left;
-  padding: 0 10px;
 }
 
-tr p {
-  font-weight: bold;
+.item-container > .header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ebebeb;
+  height: 35px;
+  border-radius: 3px;
+  margin: 0.3rem 0;
+  width: 90.5%;
+}
+
+.item-container > .item-main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-container > .header > h4 {
+  margin: 0 0.3rem 0 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 0.4rem;
+}
+
+.item-container > .header > h4:nth-child(1),
+.item-main > .input-title,
+.title {
+  width: 382px;
+}
+.item-container > .header > h4:nth-child(2),
+.item-main > .input-qty,
+.qty {
+  width: 80px;
+}
+.item-container > .header > h4:nth-child(3),
+.item-main > .rate,
+.rt {
+  width: 100px;
+}
+.item-container > .header > h4:nth-child(4),
+.amount,
+.amt {
+  width: 120px;
+}
+
+.item-main {
+  width: 91%;
+}
+
+.item-main > div,
+.item > div {
+  margin: 0 0.3rem 0 0;
+}
+
+/* This section contains Item.js styling files  */
+.sub-item {
+  display: flex;
 }
 
 .item {
   transition: all 200ms ease-in;
+  display: flex;
+  width: 91%;
+  margin-bottom: 0.3rem;
+}
+
+.item > div {
+  padding: 0.2rem 0 0.2rem 0.4rem;
+  border: 1.5px solid var(--btn-border-color);
+  border-radius: 3px;
+  font-size: 15px;
+  height: 38px;
+  display: flex;
+  align-items: center;
 }
 
 .title {
-  width: 400px;
-  border: 1.5px solid var(--btn-border-color);
-  padding: 0.5rem 1rem;
-  border-radius: 3px;
-  color: black;
-}
-
-.qty {
-  border: 1.5px solid var(--btn-border-color);
-  padding: 0.5rem 1rem;
-  border-radius: 3px;
-}
-
-.rt {
-  border: 1.5px solid var(--btn-border-color);
-  padding: 0.5rem 0.6rem;
-  border-radius: 3px;
+  overflow: hidden;
 }
 
 .rt > span {
@@ -53,36 +100,23 @@ input[type="number"] {
   width: 100%;
 }
 
-input[type="text"],
-input[type="number"] {
-  padding: 0.7rem;
+.item-main input[type="text"],
+.item-main input[type="number"] {
+  padding: 0.2rem 0 0.2rem 0.4rem;
   border: 1.5px solid var(--btn-border-color);
   border-radius: 3px;
   font-size: 14px;
+  height: 38px;
 }
 
-tr:nth-child(1) > th:nth-child(2) {
-  width: 100px;
-}
-tr:nth-child(1) > th:nth-child(3) {
-  width: 100px;
-}
-
-tr:nth-child(2) > td:nth-child(2) {
-  width: 80px;
-}
-
-tr:nth-child(1) {
-  background-color: #ebebeb;
-  height: 35px;
-  border-radius: 5px;
+.rate > input[type="text"] {
+  border: none;
 }
 
 .rate {
   display: flex;
   border: 1.5px solid var(--btn-border-color);
   border-radius: 3px;
-  width: 100px;
 }
 .rate > span {
   padding: 0.5rem 0 0.5rem 0.6rem;
@@ -99,38 +133,33 @@ tr:nth-child(1) {
 .amount {
   padding: 0.5rem;
   color: var(--text-color);
-  width: 100px;
-}
-
-.amt-title {
-  width: 100px;
 }
 
 .edit {
   display: flex;
-  padding: 0.5rem 0;
+  justify-content: flex-end;
+  padding: 0.2rem;
+  align-items: center;
 }
 
 .edit-btn {
-  width: 22px;
   cursor: pointer;
   color: var(--edit-btn-color);
-  font-size: 22px;
+  font-size: 20px;
   margin: 1px 5px;
 }
 
 .delete-btn {
-  width: 24px;
   cursor: pointer;
   color: var(--delete-btn-color);
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .add-item {
   padding: 0.45rem;
   border-radius: 3px;
   border: none;
-  margin: 0.5rem 0 0.5rem 0.3rem;
+  margin: 0.5rem 0;
   background-color: var(--btn-primary-color);
   color: white;
   font-size: 15px;
@@ -144,20 +173,40 @@ small {
   display: none;
 }
 
+/* Responsive of 800 px . 
+------------------------- */
+@media (max-width: 800px) {
+  .item-container > .header > h4:nth-child(1),
+  .item-main > .input-title,
+  .title {
+    width: 320px;
+  }
+}
+
+/* Responsive of 560px 
+------------------------- */
 @media (max-width: 560px) {
-  .rate > span {
-    padding: 0.65rem 0 0.5rem 0.6rem;
+  .item-container > .header {
+    width: 100%;
   }
-  tr:nth-child(1) > th:nth-child(2) {
-    width: 80px;
-  }
-  tr:nth-child(1) > th:nth-child(3),
-  .rate {
-    width: 80px;
+  /* 1.Item
+  2. item-main  */
+  .item,
+  .item-main {
+    width: 100%;
   }
 
-  tr:nth-child(2) > td:nth-child(2) {
-    width: 80px;
+  .sub-item {
+    display: flex;
+    flex-direction: column;
+  }
+  .item-container > .header > h4:nth-child(1),
+  .item-main > .input-title,
+  .title {
+    width: 200px;
+  }
+  .rate > span {
+    padding: 0.65rem 0 0.5rem 0.6rem;
   }
   .edit-btn,
   .delete-btn {
