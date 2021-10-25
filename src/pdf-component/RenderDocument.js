@@ -85,7 +85,7 @@ function RenderDocument({
 
   return (
     <Document>
-      <Page style={styles.page}>
+      <Page size="A4" style={styles.page}>
         <View style={styles.header}>
           <Image src={logoURL} alt="logo" style={styles.logo} />
 

@@ -1,3 +1,15 @@
+:root {
+  --btn-border-color: rgb(204, 204, 204);
+  --text-color: rgb(116, 116, 116);
+
+  --btn-primary-color: rgb(84, 197, 84);
+  --btn-hover-color: rgb(75, 163, 75);
+
+  --delete-btn-color: #b51313;
+  --delete-hover-color: #ca0909;
+  --edit-btn-color: rgb(84, 197, 84);
+}
+
 .App {
   display: flex;
   justify-content: center;
@@ -25,38 +37,61 @@
   cursor: pointer;
 }
 
+.btns {
+  display: flex;
+  margin-top: 1rem;
+}
+
 .review-btn {
-  padding: 0.5rem;
-  background-color: rgb(32, 178, 204);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem;
+  background-color: var(--btn-primary-color);
   border: none;
   color: white;
   border-radius: 3px;
   cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .review-btn:hover {
-  background-color: rgb(15, 162, 182);
+  background-color: var(--btn-hover-color);
 }
 
 .reset-btn {
-  padding: 0.5rem;
-  background-color: rgb(247, 30, 30);
+  padding: 0.4rem;
+  background-color: var(--delete-btn-color);
   border: none;
   color: white;
   border-radius: 3px;
   cursor: pointer;
   margin-left: 0.5rem;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .reset-btn:hover {
-  background-color: rgb(221, 23, 23);
+  background-color: var(--delete-hover-color);
+}
+
+.short-icons {
+  font-size: 20px;
+  margin-top: 1px;
 }
 
 @media (max-width: 560px) {
   .invoice-container {
-    padding: 0.5rem;
+    padding: 0;
   }
   * {
     font-size: 14px;
+  }
+  .review-btn {
+    margin-left: 1rem;
+  }
+  .review-btn.b1 {
+    display: none;
   }
 }

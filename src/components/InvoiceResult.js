@@ -111,7 +111,7 @@ function InvoiceResult({ subTotal, setInvoiceResultData }) {
           id="description-box"
           cols="30"
           rows="4"
-          placeholder="--Notes or description--"
+          placeholder="Terms & conditions of company"
           value={notes}
           onChange={(e) => handleChange(e, setNotes)}
           style={{ resize: "none" }}

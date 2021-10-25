@@ -4,17 +4,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --btn-border-color: rgb(204, 204, 204);
-  --text-color: rgb(116, 116, 116);
-
-  --btn-primary-color: rgb(84, 197, 84);
-  --btn-hover-color: rgb(75, 163, 75);
-
-  --delete-btn-color: #ec330e;
-  --edit-btn-color: rgb(84, 197, 84);
-}
-
 table {
   width: 100%;
   border-spacing: 4px 4px;
@@ -157,7 +146,7 @@ small {
 
 @media (max-width: 560px) {
   .rate > span {
-    padding: 0.6rem 0 0.5rem 0.6rem;
+    padding: 0.65rem 0 0.5rem 0.6rem;
   }
   tr:nth-child(1) > th:nth-child(2) {
     width: 80px;
